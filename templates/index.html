@@ -8,7 +8,13 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -17,13 +23,15 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	Enter Sepal Length: <input type="text" name="sepal_length" placeholder="Enter Sepal Length: " required="required" /><br>
-        Enter Sepal Width: <input type="text" name="sepal_width" placeholder="Enter Sepal Width: " required="required" /><br>
-		Enter Petal length: <input type="text" name="petal_length" placeholder="Enter Petal length: " required="required" /><br>
-Enter Petal Width: <input type="text" name="petal_width" placeholder="Enter Petal Width: " required="required" /><br>
+<div class="form-group">
+    	Enter Sepal Length: <input class="form-control" type="text" name="sepal_length" placeholder="Enter Sepal Length: " required="required" /><br>
+        Enter Sepal Width: <input class="form-control"  type="text" name="sepal_width" placeholder="Enter Sepal Width: " required="required" /><br>
+		Enter Petal length: <input class="form-control"  type="text" name="petal_length" placeholder="Enter Petal length: " required="required" /><br>
+Enter Petal Width: <input class="form-control"  type="text" name="petal_width" placeholder="Enter Petal Width: " required="required" /><br>
         
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict Species</button>
+</div>
     </form>
 
    <br>
