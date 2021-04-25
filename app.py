@@ -20,7 +20,7 @@ def predict():
     petal_length = float(request.form['petal_length'])
     petal_width = float(request.form['petal_width'])
     
-    finalFeatures = np.concatenate((np.array([[sepal_length ,sepal_width ,petal_length ,petal_width ]])) , axis = 1)
+    finalFeatures = np.array([[sepal_length ,sepal_width ,petal_length ,petal_width ]])
     prediction = model.predict(finalFeatures)
 
     
