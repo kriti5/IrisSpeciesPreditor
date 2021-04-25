@@ -25,7 +25,7 @@ def predict():
 
     
 
-    return render_template('index.html', prediction_text='Iris species is  $ {}'.format(round(prediction[0])))
+    return render_template('index.html', prediction_text=prediction[0])
 
 
 if __name__ == "__main__":
